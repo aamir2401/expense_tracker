@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+        body {
+            background-color: rgba(238, 238, 238, 0.962);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container {
+    border-radius: 15px;
+    max-width: 600px;
+    max-height: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 23px;
+    background-color: rgb(234, 234, 234);
+    box-shadow: 10px 10px 10px 10px rgb(211, 211, 211);
+}
+
+    input[type="text"],select, input[type="number"]
+    {
+        border-radius: 5px;
+        border-style: double;
+        margin: 15px;
+        width: 50%;
+        background-color:  rgb(234, 234, 234);
+    }
+    input[type="submit"]:hover
+    {
+        cursor: pointer;
+        background-color: rgb(159, 193, 172);
+    }
+    h3{
+        
+        text-shadow: 10cm;
+        color: rgb(46, 102, 102);
+    }
+    input[type="submit"]
+    {
+        color: aliceblue;
+        background-color: rgb(77, 112, 101);
+        border-radius: 5px;
+        border-style: double;
+        margin: 15px;
+        width: 70%;
+        padding: 8px;
+    }
+    table
+    {
+        width: 100%;
+        text-align: left;
+        border: 1px rgb(20, 12, 11);
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Expense Tcker</h2>
+        <form id="expenseForm">
+            <input id="giveDesc" placeholder="Expense Description" type="text" required />
+            <br>
+            <select id="selectCategory" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Grocery">Grocery</option>
+                <option value="Meal">Meal</option>
+                <option value="Repair">Repair</option>
+                <option value="Non-Veg">Non-Veg</option>
+                <option value="Ice-Cream">Ice-Cream</option>
+            </select>
+            <br>
+            <input type="number" id="giveAmount" placeholder="Enter Amount" required />
+            <br>
+            <input id="btnSubmit" type="submit" value="Add Expense" />
+            <h3>Expense Summary</h3>
+            <table id="expenseTable"> 
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="expenselist">
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
