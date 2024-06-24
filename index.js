@@ -10,7 +10,7 @@ expenseFormm.addEventListener("submit", function(event)
    const amount = document.getElementById('giveAmount').value;
 
 
-   if(expensedescription && selectcategory && !isNaN(amount))
+   if(expensedescription && selectcategory && !isNaN(amount) && amount > 0)
 {
     const newTableRow = document.createElement('tr')
     newTableRow.innerHTML = `<td> ${expensedescription} </td>
@@ -24,6 +24,11 @@ expenseFormm.addEventListener("submit", function(event)
 }
    else
    {
+    if(amount <= 0)
+        {
+            alert("Invalid Amount Entered!!");
+            return;
+        }
     console.log("failed")
     alert("failed");
    }
